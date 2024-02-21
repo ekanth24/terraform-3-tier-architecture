@@ -137,7 +137,7 @@ resource "aws_route_table_association" "b" {
 resource "aws_instance" "webserver1" {
   ami                    = "ami-0cf7b2f456cd5efd4"
   instance_type          = "t2.medium"
-  availability_zone      = "us-east-2a"
+  availability_zone      = "us-east-2"
   key_name               = "teform"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
@@ -151,7 +151,7 @@ resource "aws_instance" "webserver1" {
 resource "aws_instance" "webserver2" {
   ami                    = "ami-0cf7b2f456cd5efd4"
   instance_type          = "t2.medium"
-  availability_zone      = "us-east-2b"
+  availability_zone      = "us-east-2"
   key_name               = "teform"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-2.id
