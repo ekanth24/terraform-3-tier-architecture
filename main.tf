@@ -135,9 +135,9 @@ resource "aws_route_table_association" "b" {
 
 #Create EC2 Instance
 resource "aws_instance" "webserver1" {
-  ami                    = "ami-0cf7b2f456cd5efd4"
+  ami                    = "ami-0f960def03d1071d3"
   instance_type          = "t2.medium"
-  availability_zone      = "us-east-2"
+  availability_zone      = "us-west-1"
   key_name               = "teform"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
