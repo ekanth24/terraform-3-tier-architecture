@@ -149,9 +149,9 @@ resource "aws_instance" "webserver1" {
 }
 
 resource "aws_instance" "webserver2" {
-  ami                    = "ami-06b72b3b2a773be2b"
+  ami                    = "ami-0cf10cdf9fcd62d37"
   instance_type          = "t2.medium"
-  availability_zone      = "ap-south-1"
+  availability_zone      = "us-east-1a"
   key_name               = "teform"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-2.id
@@ -164,9 +164,9 @@ resource "aws_instance" "webserver2" {
 
 #Create EC2 Instance
 resource "aws_instance" "appserver1" {
-  ami                    = "ami-06b72b3b2a773be2b"
+  ami                    = "ami-0cf10cdf9fcd62d37"
   instance_type          = "t2.medium"
-  availability_zone      = "ap-south-1"
+  availability_zone      = "us-east-1a"
   key_name               = "teform"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-1.id
@@ -176,9 +176,9 @@ resource "aws_instance" "appserver1" {
 }
 
 resource "aws_instance" "appserver2" {
-  ami                    = "ami-06b72b3b2a773be2b"
+  ami                    = "ami-0cf10cdf9fcd62d37"
   instance_type          = "t2.medium"
-  availability_zone      = "ap-south-1"
+  availability_zone      = "us-east-1a"
   key_name               = "teform"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-2.id
